@@ -1,0 +1,126 @@
+{
+  "tactical": [
+    {
+      "question": "You receive a call from a user who can't access the company intranet but can browse external websites. How would you troubleshoot this issue?",
+      "answer": "1. Verify the user's network connectivity (IP address, subnet mask, default gateway)\n2. Check if the user can ping the intranet server by IP address\n3. If ping by IP works but not by name, check DNS settings\n4. Verify the user has the correct proxy settings if applicable\n5. Check if there are any VPN requirements for intranet access\n6. Verify firewall rules aren't blocking internal traffic\n7. Check if the intranet server is operational\n8. Verify the user has proper authentication credentials for the intranet"
+    },
+    {
+      "question": "A remote office reports that their internet connection is extremely slow during certain hours of the day. What steps would you take to diagnose and resolve this issue?",
+      "answer": "1. Gather data about when slowdowns occur (specific times, days, user activities)\n2. Check bandwidth utilization during slow periods using monitoring tools\n3. Perform speed tests at different times to quantify the issue\n4. Look for bandwidth-intensive applications or scheduled tasks (backups, updates)\n5. Check for network congestion on WAN links\n6. Analyze if QoS policies are properly implemented\n7. Verify if the issue is internal or with the ISP\n8. Consider bandwidth upgrades or implementing traffic shaping if necessary\n9. Monitor for potential security issues like DDoS attacks or malware"
+    },
+    {
+      "question": "Your company is planning to open a new branch office. What network design considerations would you recommend to ensure reliable connectivity with the main office?",
+      "answer": "1. Assess bandwidth requirements based on user count and applications\n2. Determine appropriate WAN connectivity options (MPLS, SD-WAN, VPN)\n3. Plan for redundant internet connections from different ISPs\n4. Design appropriate LAN infrastructure (switches, wireless)\n5. Implement proper security measures (firewalls, IPS/IDS)\n6. Consider local services vs. centralized services (DNS, DHCP, file sharing)\n7. Plan for QoS to prioritize critical applications\n8. Implement monitoring and management solutions\n9. Design for scalability to accommodate future growth\n10. Consider disaster recovery and business continuity requirements"
+    },
+    {
+      "question": "During a network upgrade, several critical services become unavailable. How would you approach troubleshooting and restoring service while minimizing downtime?",
+      "answer": "1. Immediately assess which services are affected and their dependencies\n2. Verify if the issue is related to the upgrade (changes made)\n3. Check for connectivity issues at different network layers\n4. Consult the rollback plan from the upgrade documentation\n5. Prioritize restoring the most critical services first\n6. Communicate status updates to stakeholders\n7. If necessary, implement the rollback plan to restore previous configuration\n8. Once services are restored, analyze root cause in a controlled environment\n9. Document the incident and update procedures to prevent similar issues\n10. Schedule a new maintenance window if the upgrade still needs to be completed"
+    },
+    {
+      "question": "Your network monitoring system alerts you to unusual traffic patterns that might indicate a security breach. What steps would you take to investigate and respond?",
+      "answer": "1. Identify the affected systems and the nature of the unusual traffic\n2. Isolate affected systems if necessary to prevent further spread\n3. Analyze logs from firewalls, IDS/IPS, and affected systems\n4. Look for unauthorized access attempts, unusual outbound connections, or data exfiltration\n5. Capture and analyze packet data if possible\n6. Engage the security team according to incident response procedures\n7. Determine if the alert is a false positive or a genuine security incident\n8. If confirmed as an incident, follow the organization's incident response plan\n9. Document all findings and actions taken\n10. After resolution, conduct a post-incident review and update security measures"
+    }
+  ],
+  "easy": [
+    {
+      "question": "What is the purpose of a subnet mask?",
+      "answer": "A subnet mask is used to divide an IP address into network and host portions. It determines which part of the IP address refers to the network and which part refers to the host, allowing for efficient routing and network organization."
+    },
+    {
+      "question": "What is the difference between a hub and a switch?",
+      "answer": "A hub operates at Layer 1 (Physical layer) and broadcasts data to all connected devices, while a switch operates at Layer 2 (Data Link layer) and forwards data only to the specific device it's intended for, based on MAC addresses. Switches are more efficient and secure than hubs."
+    },
+    {
+      "question": "What is the purpose of DNS?",
+      "answer": "DNS (Domain Name System) translates human-readable domain names (like www.example.com) into IP addresses that computers use to identify each other on the network. It essentially functions as the internet's phone book."
+    },
+    {
+      "question": "What is the difference between a router and a switch?",
+      "answer": "A switch operates at Layer 2 (Data Link layer) and forwards data based on MAC addresses within a local network. A router operates at Layer 3 (Network layer) and forwards data between different networks based on IP addresses. Routers make decisions about the best path for data to travel across networks."
+    },
+    {
+      "question": "What is ARP and what does it do?",
+      "answer": "ARP (Address Resolution Protocol) is used to map an IP address to a physical MAC address on a local network. When a device wants to communicate with another device on the same network, it uses ARP to discover the MAC address associated with the destination IP address."
+    },
+    {
+      "question": "What is the difference between a private and public IP address?",
+      "answer": "Private IP addresses are used within local networks and cannot be routed on the internet (e.g., 192.168.x.x, 10.x.x.x). Public IP addresses are globally unique and can be accessed directly over the internet. NAT (Network Address Translation) is typically used to allow devices with private IPs to communicate with the internet."
+    },
+    {
+      "question": "What is DHCP and what is its purpose?",
+      "answer": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses and other network configuration parameters to devices on a network. This eliminates the need for manual IP configuration and helps prevent IP address conflicts by managing the assignment process."
+    },
+    {
+      "question": "What is a VLAN and why is it used?",
+      "answer": "A VLAN (Virtual Local Area Network) is a logical subdivision of a network that allows devices to be grouped together even if they are not on the same physical network switch. VLANs improve security by isolating traffic, reduce broadcast domains, and help organize networks by function rather than physical location."
+    }
+  ],
+  "medium": [
+    {
+      "question": "Explain the difference between TCP and UDP protocols.",
+      "answer": "TCP (Transmission Control Protocol) is connection-oriented, provides error checking, guarantees delivery and order of packets, and includes flow control. UDP (User Datagram Protocol) is connectionless, has no error recovery, doesn't guarantee packet delivery or order, but offers lower latency and overhead. TCP is used for applications requiring reliability (web, email), while UDP is used for applications prioritizing speed (video streaming, DNS lookups)."
+    },
+    {
+      "question": "What is OSPF and how does it work?",
+      "answer": "OSPF (Open Shortest Path First) is a link-state routing protocol that uses Dijkstra's algorithm to find the shortest path to each network. It maintains a link-state database containing the network topology, exchanges LSAs (Link State Advertisements) with neighbors, and calculates the shortest path tree with itself as the root. OSPF routers establish adjacencies, elect a Designated Router in multi-access networks, and support area-based hierarchical design for scalability."
+    },
+    {
+      "question": "Explain the concept of VLANs and their benefits.",
+      "answer": "VLANs (Virtual Local Area Networks) logically segment a physical network into multiple broadcast domains. Benefits include: improved security by isolating traffic, reduced broadcast traffic, better network organization by function rather than physical location, simplified network management, and more efficient use of network resources. VLANs are implemented at Layer 2 and identified by VLAN IDs (1-4094) in the 802.1Q tag."
+    },
+    {
+      "question": "What is a spanning tree protocol and why is it important?",
+      "answer": "Spanning Tree Protocol (STP) prevents loops in networks with redundant paths by blocking redundant links and creating a loop-free logical topology. It's important because network loops can cause broadcast storms, MAC address table instability, and duplicate frame delivery, which can bring down a network. STP automatically reconfigures the network if a link fails, providing fault tolerance while preventing loops."
+    },
+    {
+      "question": "Explain the difference between NAT and PAT.",
+      "answer": "NAT (Network Address Translation) maps one IP address to another, typically translating between private and public addresses. PAT (Port Address Translation), also known as NAT overload, extends NAT by also translating port numbers, allowing multiple internal devices to share a single public IP address. PAT is the most common form of NAT used in home and small business networks, where many devices share one public IP address."
+    },
+    {
+      "question": "What is EIGRP and how does it differ from OSPF?",
+      "answer": "EIGRP (Enhanced Interior Gateway Routing Protocol) is a Cisco proprietary advanced distance-vector routing protocol. Unlike OSPF (a link-state protocol), EIGRP uses the DUAL algorithm and only exchanges routing information with directly connected neighbors. EIGRP is easier to configure, uses less CPU and memory, converges faster in some scenarios, and can route multiple protocols (IP, IPX). However, OSPF is an open standard, works across vendor platforms, and may scale better in very large networks."
+    },
+    {
+      "question": "What is a trunk port and when would you use it?",
+      "answer": "A trunk port is a switch port configured to carry traffic for multiple VLANs, typically using 802.1Q tagging to identify which VLAN each frame belongs to. Trunk ports are used to connect switches to other switches, to connect switches to routers, or to connect to servers that need to communicate with multiple VLANs. They allow VLAN traffic to traverse multiple network devices while maintaining VLAN separation."
+    },
+    {
+      "question": "Explain how HSRP/VRRP works and its purpose.",
+      "answer": "HSRP (Hot Standby Router Protocol, Cisco proprietary) and VRRP (Virtual Router Redundancy Protocol, industry standard) provide network redundancy by allowing multiple physical routers to appear as a single virtual router. They work by assigning a virtual IP address that client devices use as their default gateway. One router acts as the active/master router handling traffic, while others are in standby/backup mode. If the active router fails, a standby router takes over automatically, providing high availability without requiring client reconfiguration."
+    }
+  ],
+  "hard": [
+    {
+      "question": "Explain BGP path selection process and the attributes that influence it.",
+      "answer": "BGP (Border Gateway Protocol) path selection follows a specific order: highest Weight (Cisco-specific), highest Local Preference, locally originated routes, shortest AS Path, lowest Origin type (IGP < EGP < Incomplete), lowest MED, eBGP over iBGP paths, lowest IGP metric to next hop, oldest route for eBGP paths, lowest Router ID, lowest Neighbor address. Administrators can influence this process by manipulating these attributes through route maps and policies to control inbound and outbound traffic."
+    },
+    {
+      "question": "Describe the process of MPLS label distribution and forwarding.",
+      "answer": "MPLS (Multiprotocol Label Switching) uses Label Distribution Protocol (LDP) or RSVP-TE to distribute labels between Label Switching Routers (LSRs). The ingress LSR classifies packets, assigns labels, and forwards them to the next hop. Transit LSRs perform label swapping (pop incoming label, push outgoing label) based on their Label Forwarding Information Base (LFIB). The egress LSR removes the label and forwards the packet using conventional routing. This process creates Label Switched Paths (LSPs) that enable traffic engineering, VPNs, and QoS capabilities independent of the underlying network layer protocol."
+    },
+    {
+      "question": "Explain how IPsec VPN works in tunnel mode versus transport mode.",
+      "answer": "In IPsec VPN, tunnel mode encapsulates the entire original IP packet within a new IP packet with a new header, providing protection for both payload and original header. It's typically used for site-to-site VPNs and remote access scenarios. Transport mode only encrypts the payload of the original IP packet while keeping the original IP header intact, providing end-to-end security between hosts. Tunnel mode offers more security and is more commonly used in enterprise VPNs, while transport mode has less overhead but provides less protection for traffic analysis. Both modes can use AH (Authentication Header) for integrity and authentication or ESP (Encapsulating Security Payload) for encryption, integrity, and optional authentication."
+    },
+    {
+      "question": "Explain the concept of SDN (Software-Defined Networking) and how it differs from traditional networking.",
+      "answer": "SDN separates the network's control plane (decision-making) from the data plane (packet forwarding), centralizing network intelligence in software-based controllers. In traditional networking, control and data planes are integrated within each device. SDN provides programmability through open APIs, allowing applications to request network services and resources dynamically. This enables network virtualization, automated provisioning, more granular security policies, and easier implementation of complex network policies. SDN architectures typically include three layers: application layer, control layer (controllers), and infrastructure layer (physical and virtual switches)."
+    },
+    {
+      "question": "Describe how EVPN-VXLAN works and its advantages over traditional Layer 2 extension technologies.",
+      "answer": "EVPN (Ethernet VPN) combined with VXLAN (Virtual Extensible LAN) provides a scalable Layer 2/3 overlay solution. EVPN uses MP-BGP for control plane functions (MAC/IP advertisement, multi-homing) while VXLAN handles data plane encapsulation. Advantages over traditional technologies (like VPLS): 1) Control plane learning reduces flooding, 2) All-active multi-homing provides better redundancy and load balancing, 3) Integrated Layer 2 and Layer 3 services, 4) MAC mobility and protection against loops, 5) Scalability to millions of endpoints across data centers, 6) Efficient handling of BUM (Broadcast, Unknown unicast, Multicast) traffic through optimized replication, and 7) Support for multi-tenancy with VXLAN Network Identifiers (VNIs)."
+    },
+    {
+      "question": "Explain how QoS mechanisms work in enterprise networks and how you would implement them.",
+      "answer": "QoS (Quality of Service) in enterprise networks involves: 1) Classification: identifying traffic types using ACLs, NBAR, or DSCP/CoS markings, 2) Marking: tagging packets with appropriate QoS values (DSCP in Layer 3, CoS in Layer 2), 3) Congestion management: using queuing mechanisms like CBWFQ, LLQ for prioritization, 4) Congestion avoidance: implementing WRED to prevent queue overflow, 5) Policing/shaping: controlling traffic rates. Implementation requires: identifying critical applications and their requirements, creating classes with appropriate bandwidth allocations and priorities (voice/video gets priority queuing, critical data gets guaranteed bandwidth, non-critical gets best-effort), applying consistent policies end-to-end, and monitoring performance. Enterprise QoS typically uses a 4-5 class model (voice, video, critical data, bulk data, best effort) with appropriate DSCP markings for each class."
+    },
+    {
+      "question": "Describe the process of troubleshooting a complex routing issue in a multi-vendor environment with BGP, OSPF, and route redistribution.",
+      "answer": "Troubleshooting complex routing issues requires a systematic approach: 1) Understand the expected behavior and topology (routing domains, redistribution points, filtering policies), 2) Verify physical and data link connectivity, 3) Check protocol adjacencies (OSPF neighbors, BGP peers), 4) Examine routing tables on key devices to identify missing or incorrect routes, 5) Analyze redistribution points for proper metric assignment and route filtering, 6) Check for routing loops or suboptimal paths, 7) Verify route summarization and filtering policies. In multi-vendor environments, focus on standards-based configurations and be aware of vendor-specific implementations (e.g., different administrative distances, BGP attribute handling). Common issues include: improper route filtering causing route feedback loops, inconsistent metrics causing suboptimal routing, missing routes due to summarization, and route instability due to flapping links. Tools like traceroute, ping, show ip route, show ip protocols, and BGP/OSPF debugging commands are essential for isolating the problem."
+    },
+    {
+      "question": "Explain how segment routing works and its benefits over traditional MPLS.",
+      "answer": "Segment Routing (SR) simplifies MPLS by encoding the path in the packet header as an ordered list of segments (instructions) rather than establishing per-flow state in the network. Each segment is identified by a Segment ID (SID). Benefits over traditional MPLS: 1) No need for LDP/RSVP-TE signaling protocols, reducing control plane complexity, 2) Better scalability as no per-flow state is maintained in transit nodes, 3) Simplified traffic engineering with source-based routing, 4) Faster convergence during network failures, 5) Easier implementation of complex policies like disjoint paths, 6) Native support for Equal-Cost Multi-Path (ECMP), 7) Seamless integration with SDN controllers for centralized path computation. SR can be implemented in MPLS data planes (SR-MPLS) or IPv6 data planes (SRv6), making it versatile for different network environments."
+    }
+  ]
+}
